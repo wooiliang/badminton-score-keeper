@@ -1,0 +1,5 @@
+<resources>
+  <string name="app_name">Badminton Score Keeper</string>
+  <string name="win">Congratulation! You\'re winner!</string>
+  <string name="lose">Sorry, please try in the next round.</string>
+</resources>

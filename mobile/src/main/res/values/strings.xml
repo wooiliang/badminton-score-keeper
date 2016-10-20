@@ -1,0 +1,11 @@
+<resources>
+  <string name="app_name">Badminton Score Keeper</string>
+  <string name="content">
+    <big><b>Release notes</b></big>\n
+    <b>v1.0.0</b>\n
+    Release the basic functionality of badminton score keeper.\n
+    - Increase your score or opponent\'s score by clicking the score button.\n
+    - Click on undo button to go back to the previous scores.\n
+    - The scores will be stopped once any parties reach 21 scores.
+  </string>
+</resources>
