@@ -1,17 +1,26 @@
 apply plugin: 'com.android.application'
 
 android {
-  compileSdkVersion 23
-  buildToolsVersion "23.0.3"
+  compileSdkVersion 22
+  buildToolsVersion '25.0.0'
   defaultConfig {
     applicationId "me.wooiliang.badmintonscorekeeper"
-    minSdkVersion 21
-    targetSdkVersion 23
+    minSdkVersion 20
+    targetSdkVersion 22
     versionCode 1
     versionName "1.0"
   }
+  signingConfigs {
+    release {
+      storeFile file("../wooiliang.jks")
+      storePassword "9oZ2Vva2xpbm"
+      keyAlias "BadmintonScoreKeeper"
+      keyPassword "9oZ2Vva2xpbm"
+    }
+  }
   buildTypes {
     release {
+      signingConfig signingConfigs.release
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
@@ -20,8 +29,6 @@ android {
 
 dependencies {
   compile fileTree(include: ['*.jar'], dir: 'libs')
-  compile 'com.google.android.support:wearable:2.0.0-alpha3'
-  compile 'com.google.android.gms:play-services-wearable:9.6.1'
-//  compile files('libs/mobvoi-api.jar')
-//  compile 'com.ticwear:ticdesign:1.0.0'
+  compile 'com.google.android.support:wearable:1.1.0'
+  compile 'com.google.android.gms:play-services-wearable:7.3.0'
 }
